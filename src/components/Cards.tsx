@@ -74,7 +74,7 @@ export default function Cards() {
 
       {/* Botão Centralizado */}
       <button className="mt-12 px-10 py-4 rounded-full text-white border border-gray-500 bg-transparent hover:bg-gray-800 transition-all duration-300">
-  Entre em contato
+  Conheça nossos Serviços
 </button>
     </section>
   );

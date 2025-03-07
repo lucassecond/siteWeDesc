@@ -22,7 +22,7 @@ export function About() {
             
             {/* Botão */}
             <button className="mt-10 px-10 py-4 bg-gradient-to-r from-[#FCCB16] to-[#F93839] text-white font-semibold text-lg rounded-full shadow-lg transition-all duration-300 hover:scale-110">
-              Conheça mais
+              Entre em contato →
             </button>
           </div>
   
