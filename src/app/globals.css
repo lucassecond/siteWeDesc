@@ -22,5 +22,44 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: theme("fontFamily.sans");
 }
+
+@keyframes gradientRGB {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradiente Animado para o Texto */
+.bg-gradient-text {
+  background: linear-gradient(90deg, #FCCB16, #F9A72B, #F97560, #F93839);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientRGB 6s ease infinite;
+}
+
+/* Gradiente para Botão */
+.bg-gradient-btn {
+  background: linear-gradient(90deg, #FCCB16, #F9A72B, #F97560, #F93839);
+  background-size: 300% 300%;
+  animation: gradientRGB 6s ease infinite;
+  color: white;
+}
+
+/* Transição Suave Entre Seções */
+.transition-hero-cards {
+  background: linear-gradient(to bottom, #0a0a0a 0%, #131313 35%, #1b1b1b 70%, #222222 100%);
+}
+
+.transition-cards-partners {
+  background: linear-gradient(to bottom, #0a0a0a 0%, #000000 100%);
+}
+
+.transition-partners-sobre {
+  height: 120px; /* Aumentando um pouco para suavizar */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(20, 20, 20, 0.8) 30%, rgba(255, 255, 255, 0.1) 80%, rgba(255, 255, 255, 1) 100%);
+}
+
