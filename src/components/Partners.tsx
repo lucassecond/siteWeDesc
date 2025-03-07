@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -13,7 +13,7 @@ const logos = [
 ];
 
 export function Partners() {
-  const carousel = useRef<HTMLDivElement>(null);
+  
 
   return (
     <>
