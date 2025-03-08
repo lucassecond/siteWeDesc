@@ -10,6 +10,12 @@ const logos = [
   "/logo4.svg",
   "/logo5.svg",
   "/logo6.svg",
+  "/logo5.svg",
+  "/logo4.svg",
+  "/logo3.svg",
+  "/logo2.svg",
+  "/logo6.svg",
+
 ];
 
 export function Partners() {

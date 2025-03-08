@@ -1,20 +1,37 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react"; // Ícone de idioma
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { Menu, X, Globe } from "lucide-react";
+import { motion, useAnimation } from "framer-motion";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [hidden, setHidden] = useState(false);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        setHidden(true); // Esconde ao rolar para baixo
+      } else {
+        setHidden(false); // Mostra ao rolar para cima
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <>
       {/* NavBar Principal */}
       <motion.nav
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        animate={{ opacity: 1, y: hidden ? "-100%" : "0%" }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="fixed w-full top-0 z-50 backdrop-blur-md transition-all duration-500 bg-black/30 rounded-full px-6 py-3"
       >
         <div className="container mx-auto flex justify-between items-center">

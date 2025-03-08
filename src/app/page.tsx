@@ -2,7 +2,8 @@ import Hero from "@/components/Hero";
 import Cards from "@/components/Cards";
 import { Partners } from "@/components/Partners";
 import { About } from "@/components/About"; 
-import { TeamWeDesc } from "@/components/TeamWeDesc"; 
+import { TeamWeDesc } from "@/components/TeamWeDesc";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <Cards />
       <Partners />
       <About /> 
-      <TeamWeDesc /> 
+      <TeamWeDesc />
+      <Footer />
     </main>
   );
 }
