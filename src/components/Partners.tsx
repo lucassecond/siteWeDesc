@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+
 const logos = [
   "/logo1.svg",
   "/logo2.svg",
@@ -23,10 +24,8 @@ export function Partners() {
 
   return (
     <>
-      {/* Transição melhorada entre as seções */}
-      <div className="h-40 transition-cards-partners"></div>
-
-      <section className="bg-black text-white py-28 text-center">
+    
+      <section className="bg-black text-white py-20 text-center">
         <h2 className="text-5xl font-semibold mb-8">Parceria de <strong>Alto Desempenho</strong></h2>
         <p className="max-w-[700px] mx-auto mb-14 text-gray-300 text-xl">
           São mais de <strong>50</strong> empresas que confiam na <strong className="text-white">WeDesc</strong>
